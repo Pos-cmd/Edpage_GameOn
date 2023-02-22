@@ -8,10 +8,9 @@ menu.addEventListener("click", function () {
   if (header.classList.contains("open")) {
     overlay.style.display = "block";
     overlay.style.opacity = 1;
-    menu__togle.style.display = "flex";
+    menu__togle.style.transform = "translateY(0)";
   } else {
-    menu__togle.style.display = "none";
+    menu__togle.style.transform = "translateY(-200%)";
     overlay.style.opacity = 0;
-    overlay.style.display = "none";
   }
 });

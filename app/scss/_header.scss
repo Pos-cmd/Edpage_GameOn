@@ -38,7 +38,7 @@
       darken($rouge-principale, 25),
       transparent
     );
-    transition: opacity 200ms ease-in;
+    transition: all .2s ease-in;
   }
 
   .pacman {
@@ -81,12 +81,13 @@
       background-color: #fff;
       padding: 1.625rem;
       text-align: center;
-      height: 25.5rem;
-      display: none;
+      height: 34.375rem;
+      display: flex;
+      transform: translateY(-200%);
       flex-direction: column;
       justify-content: space-evenly;
       border-radius: 20px;
-      transform: transform 200ms ease-in;
+      transition: transform 300ms ease-in-out;
 
       a {
         padding: 0.625rem;
