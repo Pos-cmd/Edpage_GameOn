@@ -75,3 +75,22 @@ p {
   margin-top: 0;
   font-size: 1rem;
 }
+
+.hide-for-md{
+  @include breakpoint-down(medium){
+    display: none;
+  }
+}
+
+.hide-for-lg{
+  @include breakpoint-up(medium){
+    display: none;
+  }
+}
+
+.hide-for-xlg{
+  @include breakpoint-up(large){
+    display: none;
+  }
+}
+

@@ -1,0 +1,98 @@
+.main {
+  display: flex;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  &__img {
+    width: 95%;
+    border-radius: 1.25rem;
+    border-radius: 0.625rem;
+    margin-block: 1rem;
+  }
+
+  &__title {
+    font-size: 35px;
+    line-height: 1.3;
+  }
+
+  &__desc {
+    font-size: 13px;
+    padding-block-start: 1rem;
+  }
+
+  &__sub-btn {
+    font-size: clamp(0.875rem, 1vw + 0.3125rem, 1.375rem);
+    margin-inline: auto;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+
+  &__hero {
+    display: flex;
+    background: url(../../assets/img/gameon_1440.png);
+    background-size: cover;
+    height: 600px;
+    border-radius: 10px;
+  }
+}
+
+.hero {
+  margin-top: 5rem;
+  height: 43.75rem;
+
+  &__container {
+    margin-inline: auto;
+    margin-block: 4rem;
+    width: 80%;
+    line-height: 1.4;
+  }
+
+  @include breakpoint-down(small) {
+    display: none;
+  }
+
+  &__title {
+    font-size: clamp(3.125rem, 7vw + 1px, 8rem);
+  }
+
+  &__desc {
+    width: 30vw;
+    font-size: 1.125rem;
+  }
+
+  &__title,
+  &__desc {
+    color: #fff;
+    margin-bottom: 3.5rem;
+  }
+
+  &__sub-btn {
+    font-size: 1.375rem;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+}
+
+.footer {
+  display: flex;
+  margin-top: 2rem;
+
+  &__container {
+    width: 80%;
+    margin: auto;
+
+    @include breakpoint-down(small) {
+        display: flex;
+      justify-content: center;
+    }
+  }
+
+  span {
+    color: $rouge-principale;
+  }
+}
