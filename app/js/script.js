@@ -4,7 +4,7 @@ const overlay = document.querySelector(".overlay");
 const menu__togle = document.querySelector(".header__menu--toggle");
 const show_form = document.querySelectorAll(".show_form");
 const valid_form = document.querySelector(".valid_form");
-const quit_form = document.querySelector(".quit_form");
+const quit_form = document.querySelectorAll(".quit_form");
 const main_container = document.querySelector(".main__container");
 const form = document.querySelector(".form");
 const form_input = document.querySelector(".form__items");
@@ -38,9 +38,11 @@ valid_form.addEventListener("click", function (e) {
   form_success.style.display = "flex";
 });
 
-quit_form.addEventListener("click", function (e) {
-  e.preventDefault();
-  form_success.style.display = "none";
-  form.style.display = "none";
-  main_container.style.display = "flex";
+quit_form.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    form_success.style.display = "none";
+    form.style.display = "none";
+    main_container.style.display = "flex";
+  });
 });

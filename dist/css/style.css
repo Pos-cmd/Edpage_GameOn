@@ -284,12 +284,17 @@ p {
 .form {
   display: none;
   background-color: #1b1b1b;
-  height: 45.3125rem;
+  max-width: 34.5864rem;
+  width: 100%;
+  height: 46.25rem;
   margin-inline: auto;
   border-radius: 5px;
 }
 .form__items {
   padding: 0 2rem;
+}
+.form__items.btn {
+  margin-top: 4rem;
 }
 .form__close {
   display: flex;
@@ -306,13 +311,13 @@ p {
   flex-direction: column;
   padding-bottom: 0.8125rem;
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
 }
 .form__item--no {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: #fff;
   margin-bottom: 1rem;
-  line-height: 1.8;
+  line-height: 1.4;
 }
 .form__item input[type=text] {
   height: 2.5rem;
@@ -334,7 +339,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 50%;
+  height: 55%;
   -webkit-margin-before: 2rem;
           margin-block-start: 2rem;
   padding: 0 2rem;
