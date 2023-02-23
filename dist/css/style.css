@@ -140,6 +140,8 @@ p {
   height: 4rem;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  background: #fff;
 }
 .header__menu {
   display: flex;
@@ -151,7 +153,6 @@ p {
   }
 }
 .header__menu--toggle {
-  z-index: 1;
   width: 90%;
   position: absolute;
   top: 4rem;
