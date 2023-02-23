@@ -1,1 +1,24 @@
-<svg version="1.1" viewBox="0.0 0.0 960.0 720.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><clipPath id="p.0"><path d="m0 0l960.0 0l0 720.0l-960.0 0l0 -720.0z" clip-rule="nonzero"/></clipPath><g clip-path="url(#p.0)"><path fill="#000000" fill-opacity="0.0" d="m0 0l960.0 0l0 720.0l-960.0 0z" fill-rule="evenodd"/><path fill="#ff0000" d="m718.5824 598.5827l0 0c-136.6535 136.65356 -354.25018 140.61597 -486.01575 8.850403c-131.76556 -131.76556 -127.803116 -349.3622 8.850388 -486.01575c136.6535 -136.6535 354.25015 -140.61597 486.01578 -8.850388l-247.4331 247.43307z" fill-rule="evenodd"/><path stroke="#ff0000" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="butt" d="m718.5824 598.5827l0 0c-136.6535 136.65356 -354.25018 140.61597 -486.01575 8.850403c-131.76556 -131.76556 -127.803116 -349.3622 8.850388 -486.01575c136.6535 -136.6535 354.25015 -140.61597 486.01578 -8.850388l-247.4331 247.43307z" fill-rule="evenodd"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="0 0 1000 1000" xml:space="preserve">
+<desc>Created with Fabric.js 3.5.0</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+<g transform="matrix(0.947 0 0 0.947 325.1225 451.9137)" id="563120" clip-path="url(#CLIPPATH_1)">
+<clipPath id="CLIPPATH_1">
+	<path transform="matrix(1 0 0 1 0 0) translate(-480, -360)" id="p.0" d="m 0 0 l 960 0 l 0 720 l -960 0 l 0 -720 z" stroke-linecap="round"/>
+</clipPath>
+<path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: rgb(0,0,0); fill-opacity: 0; fill-rule: evenodd; opacity: 1;" transform=" translate(-480, -360)" d="m 0 0 l 960 0 l 0 720 l -960 0 z" stroke-linecap="round"/>
+</g>
+<g transform="matrix(1.6798 0 0 1.4614 496.1079 498.9932)" id="77419" clip-path="url(#CLIPPATH_2)">
+<clipPath id="CLIPPATH_2">
+	<path transform="matrix(1 0 0 1 48.1449 0) translate(-480, -360)" id="p.0" d="m 0 0 l 960 0 l 0 720 l -960 0 l 0 -720 z" stroke-linecap="round"/>
+</clipPath>
+<path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: rgb(255,0,0); fill-rule: evenodd; opacity: 1;" transform=" translate(-431.8551, -360)" d="m 718.5824 598.5827 l 0 0 c -136.6535 136.65356 -354.25018 140.61597 -486.01575 8.850403 c -131.76556 -131.76556 -127.803116 -349.3622 8.850388 -486.01575 c 136.6535 -136.6535 354.25015 -140.61597 486.01578 -8.850388 l -247.4331 247.43307 z" stroke-linecap="round"/>
+</g>
+<g transform="matrix(0.947 0 0 0.947 279.5251 451.9132)" id="50409" clip-path="url(#CLIPPATH_3)">
+<clipPath id="CLIPPATH_3">
+	<path transform="matrix(1 0 0 1 48.1449 0) translate(-480, -360)" id="p.0" d="m 0 0 l 960 0 l 0 720 l -960 0 l 0 -720 z" stroke-linecap="round"/>
+</clipPath>
+<path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 10; is-custom-font: none; font-file-url: none; fill: none; fill-rule: evenodd; opacity: 1;" transform=" translate(-431.8551, -360)" d="m 718.5824 598.5827 l 0 0 c -136.6535 136.65356 -354.25018 140.61597 -486.01575 8.850403 c -131.76556 -131.76556 -127.803116 -349.3622 8.850388 -486.01575 c 136.6535 -136.6535 354.25015 -140.61597 486.01578 -8.850388 l -247.4331 247.43307 z" stroke-linecap="round"/>
+</g>
+</svg>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=description content="Site vitrine pour l'évènement GameOn"/>
     <title>Game On</title>
     <link
       rel="stylesheet"
@@ -17,61 +18,83 @@
   <body>
     <header class="header">
       <div class="overlay"></div>
-      <nav>
-        <div class="header__logo">
-          <h1>
+      <nav itemscope itemtype="http://schema.org/Organization">
+        <div
+          class="header__logo"
+          itemprop="logo"
+          itemscope
+          itemtype="http://schema.org/ImageObject"
+        >
+          <h1 itemprop="name">
             Game<span class="pacman"
               ><img src="assets/img/Pacman.svg" alt="" /></span
             >n
+            <meta itemprop="encodingFormat" content="image/svg+xml" />
           </h1>
         </div>
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a href="$" class="header__menu-link btn">Détail de l'évènement</a>
+        <ul
+          class="header__menu"
+          itemscope
+          itemtype="http://schema.org/MenuItem"
+        >
+          <li class="header__menu-item" itemprop="name">
+            <a href="#" class="header__menu-link btn" itemprop="url"
+              >Détail de l'évènement</a
+            >
           </li>
-          <li class="header__menu-item">
-            <a href="$" class="header__menu-link">À propos</a>
+          <li class="header__menu-item" itemprop="name">
+            <a href="#" class="header__menu-link" itemprop="url">À propos</a>
           </li>
-          <li class="header__menu-item">
-            <a href="$" class="header__menu-link">Contact</a>
+          <li class="header__menu-item" itemprop="name">
+            <a href="#" class="header__menu-link" itemprop="url">Contact</a>
           </li>
-          <li class="header__menu-item">
-            <a href="$" class="header__menu-link">Évènements passés</a>
+          <li class="header__menu-item" itemprop="name">
+            <a href="#" class="header__menu-link" itemprop="url"
+              >Évènements passés</a
+            >
           </li>
         </ul>
 
-        <a class="header__toggle hide-for-xlg">
+        <div class="header__toggle hide-for-xlg">
           <span></span>
           <span></span>
           <span></span>
-        </a>
+        <div/>
       </nav>
-      <ul class="header__menu--toggle">
-        <li class="header__menu-item">
-          <a href="$" class="header__menu-link btn">Détail de l'évènement</a>
+      <ul
+        class="header__menu--toggle"
+        itemscope
+        itemtype="http://schema.org/MenuItem"
+      >
+        <li class="header__menu-item" itemprop="name">
+          <a href="#" class="header__menu-link btn" itemprop="url"
+            >Détail de l'évènement</a
+          >
         </li>
-        <li class="header__menu-item">
-          <a href="$" class="header__menu-link">À propos</a>
+        <li class="header__menu-item" itemprop="name">
+          <a href="#" class="header__menu-link" itemprop="url">À propos</a>
         </li>
-        <li class="header__menu-item">
-          <a href="$" class="header__menu-link">Contact</a>
+        <li class="header__menu-item" itemprop="name">
+          <a href="#" class="header__menu-link" itemprop="url">Contact</a>
         </li>
-        <li class="header__menu-item">
-          <a href="$" class="header__menu-link">Évènements passés</a>
+        <li class="header__menu-item" itemprop="name">
+          <a href="#" class="header__menu-link" itemprop="url"
+            >Évènements passés</a
+          >
         </li>
       </ul>
     </header>
     <main class="main">
-      <div class="main__container">
-        <h2 class="main__title hide-for-lg">
+      <div class="main__container" itemscope itemtype="http://schema.org/Event">
+        <h2 class="main__title hide-for-lg" itemprop="name">
           Marathon national de jeux vidéos
         </h2>
-        <p class="main__desc hide-for-lg">
+        <p class="main__desc hide-for-lg" itemprop="description">
           Vous aimerez jouer ? Notre prochain évènement gaming est ouvert aux
           réservation.... Places limitées
         </p>
         <img
-          src="assets/img/gameon_700.png"
+          src="assets/img/gameon_700.webp"
           alt="homme jouant a un jeux"
           class="main__img hide-for-lg"
         />
@@ -79,18 +102,37 @@
           Je M'inscris
         </button>
 
-        <div class="hero main__hero">
+        <div
+          class="hero main__hero"
+          itemprop="subEvent"
+          itemscope
+          itemtype="http://schema.org/Event"
+        >
           <div class="hero__container">
-            <h2 class="hero__title">Marathon national de jeux vidéos</h2>
-            <p class="hero__desc">
+            <h2 class="hero__title" itemprop="name">
+              Marathon national de jeux vidéos
+            </h2>
+            <p class="hero__desc" itemprop="description">
               Vous aimerez jouer ? Notre prochain évènement gaming est ouvert
               aux réservation.... Places limitées
             </p>
-            <button class="hero__sub-btn btn show_form">Je M'inscris</button>
+            <button
+              class="hero__sub-btn btn show_form"
+              itemprop="potentialAction"
+              itemscope
+              itemtype="http://schema.org/ReserveAction"
+            >
+              Je M'inscris
+            </button>
           </div>
         </div>
       </div>
-      <form action="" class="main__form form">
+      <form
+        action=""
+        class="main__form form"
+        itemscope
+        itemtype="https://schema.org/Person"
+      >
         <div class="form__close">
           <i class="fa-solid fa-xmark quit_form"></i>
         </div>
@@ -101,7 +143,7 @@
               type="text"
               name="firstname"
               placeholder="Votre prénom..."
-              id=""
+              itemprop="givenName"
             />
           </li>
           <li class="form__item">
@@ -110,12 +152,18 @@
               type="text"
               name="lastname"
               placeholder="Votre nom..."
-              id=""
+              itemprop="familyName"
             />
           </li>
           <li class="form__item">
             <label for="email">E-mail</label>
-            <input type="text" name="email" placeholder="E-mail..." id="" />
+            <input
+              type="text"
+              name="email"
+              placeholder="E-mail..."
+              id=""
+              itemprop="email"
+            />
           </li>
           <li class="form__item">
             <label for="birthday">Date de naissance</label>
@@ -123,7 +171,7 @@
               type="text"
               name="birthday"
               placeholder="Date de naissance.."
-              id=""
+              itemprop="birthDate"
             />
           </li>
           <li class="form__item">
@@ -134,7 +182,6 @@
               type="text"
               name="nb-participation"
               placeholder="Nombre de participation..."
-              id=""
             />
           </li>
           <li class="form__item--no">
@@ -147,7 +194,7 @@
               name="location"
               value="new-york"
               placeholder="New York"
-              id=""
+              itemprop="memberOf"
             />
             <label for="sans-francisco">Sans-Francisco</label>
             <input
@@ -155,7 +202,7 @@
               name="location"
               value="sans-francisco"
               placeholder="sans-francisco"
-              id=""
+              itemprop="memberOf"
             />
             <label for="seatle">Seatle</label>
             <input
@@ -163,7 +210,7 @@
               name="location"
               value="seatle"
               placeholder="seatle"
-              id=""
+              itemprop="memberOf"
             />
             <label for="chicago">Chicago</label>
             <input
@@ -171,7 +218,7 @@
               name="location"
               value="chicago"
               placeholder="chicago"
-              id=""
+              itemprop="memberOf"
             />
             <label for="boston">Boston</label>
             <input
@@ -179,7 +226,7 @@
               name="location"
               value="boston"
               placeholder="boston"
-              id=""
+              itemprop="memberOf"
             />
             <label for="portland">Portland</label>
             <input
@@ -187,44 +234,60 @@
               name="location"
               value="portland"
               placeholder="portland"
-              id=""
+              itemprop="memberOf"
             />
           </li>
-          <li class="form__item--no">
-            <input type="checkbox" name="valid" placeholder="valid" id="" />
-            <label for="valid"
+          <li
+            class="form__item--no"
+            itemscope
+            itemtype="https://schema.org/CheckAction"
+          >
+            <input
+              type="checkbox"
+              name="valid"
+              placeholder="valid"
+              itemprop="potentialAction"
+            />
+            <label for="valid" itemprop="name"
               >J'ai lue et accepté les conditions d'utilisation</label
             ><br />
             <input
               type="checkbox"
               name="notification"
               placeholder="notification"
-              id=""
+              itemprop="potentialAction"
             />
-            <label for="notification"
+            <label for="notification" itemprop="name"
               >Je souhaite être prévenu des prochains évènement</label
             >
           </li>
-          <li class="form__item">
+          <li
+            class="form__item"
+            itemscope
+            itemtype="https://schema.org/CommunicateAction"
+          >
             <input
               type="submit"
               value="Je M'inscris"
               class="form__sub-btn btn valid_form"
+              itemprop="potentialAction"
             />
           </li>
         </ul>
 
-        <div class="form__success">
+        <div class="form__success"  itemscope itemtype="https://schema.org/EventReservation">
           <div class="form__success-container">
             <h2 class="form__success-msg">Merci pour votre inscription</h2>
             <button class="form__sub-btn btn quit_form">Fermer</button>
+            <meta itemprop="reservationStatus" content="http://schema.org/Confirmed">
           </div>
         </div>
       </form>
     </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <span> Copyright 2014 - 2022, GameOne inc. </span>
+    <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+      <div class="footer__container" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <span itemprop="name">GameOne Inc.</span>
+        <span>&nbsp;&copy; 2014 - 2022, All Rights Reserved.</span>
       </div>
     </footer>
     <script src="app/js/script.js"></script>
