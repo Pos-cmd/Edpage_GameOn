@@ -279,4 +279,68 @@ p {
 }
 .footer span {
   color: #ff0000;
+}
+
+.form {
+  display: none;
+  background-color: #1b1b1b;
+  height: 45.3125rem;
+  margin-inline: auto;
+  border-radius: 5px;
+}
+.form__items {
+  padding: 0 2rem;
+}
+.form__close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 1rem 0;
+}
+.form i {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8125rem;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.form__item--no {
+  font-size: 0.8125rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.form__item input[type=text] {
+  height: 2.5rem;
+  border-radius: 0.3125rem;
+  border: none;
+  padding-inline: 1rem;
+  -webkit-margin-before: 0.625rem;
+          margin-block-start: 0.625rem;
+}
+.form__success {
+  display: none;
+  height: 90%;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.form__success-container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+  padding: 0 2rem;
+}
+.form__sub-btn {
+  width: 9.375rem;
+  padding: 1rem 2rem;
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */

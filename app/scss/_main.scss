@@ -87,7 +87,7 @@
     margin: auto;
 
     @include breakpoint-down(small) {
-        display: flex;
+      display: flex;
       justify-content: center;
     }
   }

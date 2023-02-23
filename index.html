@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game On</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="dist/css/style.css" />
   </head>
   <body>
@@ -68,7 +75,9 @@
           alt="homme jouant a un jeux"
           class="main__img hide-for-lg"
         />
-        <button class="main__sub-btn btn hide-for-lg">Je M'inscris</button>
+        <button class="main__sub-btn btn show_form hide-for-lg">
+          Je M'inscris
+        </button>
 
         <div class="hero main__hero">
           <div class="hero__container">
@@ -77,10 +86,141 @@
               Vous aimerez jouer ? Notre prochain évènement gaming est ouvert
               aux réservation.... Places limitées
             </p>
-            <button class="hero__sub-btn btn">Je M'inscris</button>
+            <button class="hero__sub-btn btn show_form">Je M'inscris</button>
           </div>
         </div>
       </div>
+      <form action="" class="main__form form">
+        <div class="form__close">
+          <i class="fa-solid fa-xmark quit_form"></i>
+        </div>
+        <ul class="form__items">
+          <li class="form__item">
+            <label for="firstname">Prénom</label>
+            <input
+              type="text"
+              name="firstname"
+              placeholder="Votre prénom..."
+              id=""
+            />
+          </li>
+          <li class="form__item">
+            <label for="lastname">Nom</label>
+            <input
+              type="text"
+              name="lastname"
+              placeholder="Votre nom..."
+              id=""
+            />
+          </li>
+          <li class="form__item">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" placeholder="E-mail..." id="" />
+          </li>
+          <li class="form__item">
+            <label for="birthday">Date de naissance</label>
+            <input
+              type="text"
+              name="birthday"
+              placeholder="Date de naissance.."
+              id=""
+            />
+          </li>
+          <li class="form__item">
+            <label for="nb-participation"
+              >À combien de tournois GameOn avez-vous déja participé ?</label
+            >
+            <input
+              type="text"
+              name="nb-participation"
+              placeholder="Nombre de participation..."
+              id=""
+            />
+          </li>
+          <li class="form__item--no">
+            <label for="location"
+              >À quel tournois souhaitez-vous participer cette année ?</label
+            ><br />
+            <label for="new-york">New-York</label>
+            <input
+              type="radio"
+              name="location"
+              value="new-york"
+              placeholder="New York"
+              id=""
+            />
+            <label for="sans-francisco">Sans-Francisco</label>
+            <input
+              type="radio"
+              name="location"
+              value="sans-francisco"
+              placeholder="sans-francisco"
+              id=""
+            />
+            <label for="seatle">Seatle</label>
+            <input
+              type="radio"
+              name="location"
+              value="seatle"
+              placeholder="seatle"
+              id=""
+            />
+            <label for="chicago">Chicago</label>
+            <input
+              type="radio"
+              name="location"
+              value="chicago"
+              placeholder="chicago"
+              id=""
+            />
+            <label for="boston">Boston</label>
+            <input
+              type="radio"
+              name="location"
+              value="boston"
+              placeholder="boston"
+              id=""
+            />
+            <label for="portland">Portland</label>
+            <input
+              type="radio"
+              name="location"
+              value="portland"
+              placeholder="portland"
+              id=""
+            />
+          </li>
+          <li class="form__item--no">
+            <input type="checkbox" name="valid" placeholder="valid" id="" />
+            <label for="valid"
+              >J'ai lue et accepté les conditions d'utilisation</label
+            ><br />
+            <input
+              type="checkbox"
+              name="notification"
+              placeholder="notification"
+              id=""
+            />
+            <label for="notification"
+              >Je souhaite être prévenu des prochains évènement</label
+            >
+          </li>
+          <li class="form__item">
+            <input
+              type="submit"
+              value="Je M'inscris"
+              class="form__sub-btn btn valid_form"
+            />
+          </li>
+        </ul>
+
+        <div class="form__success">
+          <div class="form__success-container">
+            <h2 class="form__success-msg">Merci pour votre inscription</h2>
+            <input type="submit" value="Fermer" class="form__sub-btn btn quit_form"/>
+          </div>
+        </div>
+      </form>
     </main>
     <footer class="footer">
       <div class="footer__container">
