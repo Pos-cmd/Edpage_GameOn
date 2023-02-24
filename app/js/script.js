@@ -24,7 +24,7 @@ const validCheckbox = document.getElementById("validCheckbox");
 
 function isValidName(name) {
   // le nom et prénom doivent avoir plus de 3 caractères et ne contenant pas de chiffre
-  const regex = /^[a-zA-Z\-]{3,}$/;
+  const regex = /^[a-zA-Z'\-]{3,}$/;
   return regex.test(name.value);
 }
 
