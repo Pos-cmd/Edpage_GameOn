@@ -1,5 +1,4 @@
 .form {
-  display: none; //Block
   background-color: #1b1b1b;
   max-width: 34.5864rem;
   width: 100%;
@@ -8,7 +7,6 @@
   border-radius: 5px;
 
   &__items {
-    // display: none;
     padding: 0 2rem;
     height: 90%;
     grid-template-rows: repeat(8, 1fr);
@@ -74,7 +72,6 @@
   }
 
   &__success {
-    display: none;
     height: 90%;
     flex-direction: column;
     justify-content: flex-end;

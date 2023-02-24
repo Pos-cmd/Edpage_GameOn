@@ -17,7 +17,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="overlay"></div>
+      <div class="overlay display-none"></div>
       <nav itemscope itemtype="http://schema.org/Organization">
         <div
           class="header__logo"
@@ -62,7 +62,7 @@
         </div>
       </nav>
       <ul
-        class="header__menu--toggle"
+        class="header__menu--toggle translateY-200"
         itemscope
         itemtype="http://schema.org/MenuItem"
       >
@@ -85,7 +85,7 @@
       </ul>
     </header>
     <main class="main">
-      <div class="main__container" itemscope itemtype="http://schema.org/Event">
+      <div class="main__container display-flex" itemscope itemtype="http://schema.org/Event">
         <h2 class="main__title hide-for-lg" itemprop="name">
           Marathon national de jeux vidéos
         </h2>
@@ -129,7 +129,7 @@
       </div>
       <form
         action="/"
-        class="main__form form"
+        class="main__form form display-none"
         id="form"
         itemscope
         itemtype="https://schema.org/Person"
@@ -137,7 +137,7 @@
         <div class="form__close">
           <i class="fa-solid fa-xmark quit_form"></i>
         </div>
-        <ul class="form__items">
+        <ul class="form__items display-none">
           <li class="form__item">
             <label for="firstname">Prénom</label>
             <input
@@ -301,7 +301,7 @@
           </li>
         </ul>
         <div
-          class="form__success"
+          class="form__success display-none"
           itemscope
           itemtype="https://schema.org/EventReservation"
         >

@@ -1,7 +1,7 @@
 const header = document.querySelector(".header");
 const menu = document.querySelector(".header__toggle");
 const overlay = document.querySelector(".overlay");
-const menu__togle = document.querySelector(".header__menu--toggle");
+const menu__toggle = document.querySelector(".header__menu--toggle");
 const show_form = document.querySelectorAll(".show_form");
 const quit_form = document.querySelectorAll(".quit_form");
 const main_container = document.querySelector(".main__container");
@@ -21,6 +21,24 @@ const nb_ParticipationInput = document.getElementById("nb-participation");
 const validCheckbox = document.getElementById("validCheckbox");
 
 //*************Function***************//
+
+function changeDisplay(element, display) {
+  if (display === "flex") {
+    element.classList.remove("display-none");
+    element.classList.add(`display-flex`);
+  } else if (display === "grid") {
+    element.classList.remove("display-none");
+    element.classList.add(`display-grid`);
+  } else if (display === "block") {
+    element.classList.remove("display-none");
+    element.classList.add(`display-block`);
+  } else {
+    element.classList.add(`display-none`);
+    element.classList.remove(`display-flex`);
+    element.classList.remove(`display-grid`);
+    element.classList.remove("display-block");
+  }
+}
 
 function isValidName(name) {
   // le nom et prénom doivent avoir plus de 3 caractères et ne contenant pas de chiffre
@@ -88,29 +106,6 @@ function setSuccess(input) {
 }
 
 //*************EventListener***************//
-
-menu.addEventListener("click", function () {
-  header.classList.toggle("open");
-  if (header.classList.contains("open")) {
-    overlay.style.display = "block";
-    overlay.style.opacity = 1;
-    menu__togle.style.transform = "translateY(0)";
-  } else {
-    menu__togle.style.transform = "translateY(-200%)";
-    overlay.style.opacity = 0;
-    overlay.style.display = "none";
-  }
-});
-
-show_form.forEach((btn) => {
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-    console.log("click");
-    main_container.style.display = "none";
-    form.style.display = "block";
-    form_input.style.display = "grid";
-  });
-});
 
 let hasError = {};
 
@@ -184,7 +179,8 @@ form.addEventListener("submit", function (e) {
 
   if (!Object.entries(hasError).some((error) => error[1])) {
     form_input.style.display = "none";
-    form_success.style.display = "flex";
+    changeDisplay(form_input, "none");
+    changeDisplay(form_success, "flex");
     [...smallList].forEach((small) => (small.innerText = ""));
     [...inputList].forEach((input) => {
       (input.value = ""), (input.checked = false);
@@ -192,12 +188,35 @@ form.addEventListener("submit", function (e) {
   }
 });
 
+menu.addEventListener("click", function () {
+  header.classList.toggle("open");
+  if (header.classList.contains("open")) {
+    changeDisplay(overlay, "block");
+    menu__toggle.classList.add("translateY-0");
+    menu__toggle.classList.remove("translateY-200");
+  } else {
+    menu__toggle.classList.remove("translateY-0");
+    menu__toggle.classList.add("translateY-200");
+    changeDisplay(overlay, "none");
+  }
+});
+
+show_form.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log("click");
+    changeDisplay(main_container, "none");
+    changeDisplay(form, "block");
+    changeDisplay(form_input, "grid");
+  });
+});
+
 quit_form.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
-    form_success.style.display = "none";
-    form.style.display = "none";
-    main_container.style.display = "flex";
+    changeDisplay(form_success, "none");
+    changeDisplay(form, "none");
+    changeDisplay(main_container, "flex");
     [...smallList].forEach((small) => (small.innerText = ""));
   });
 });
