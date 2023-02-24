@@ -12,6 +12,8 @@
     border-radius: 1.25rem;
     border-radius: 0.625rem;
     margin-block: 1rem;
+    margin-inline: auto;
+    box-shadow: 5px 5px 7px 0px rgba(231, 2, 71, 0.75);
   }
 
   &__title {
@@ -37,6 +39,7 @@
     background-size: cover;
     height: 600px;
     border-radius: 10px;
+    box-shadow: 10px 10px 20px 0px rgba(231, 2, 71, 0.75);
   }
 }
 
@@ -93,6 +96,6 @@
 
   span {
     color: $rouge-principale;
-    font-size: .8125rem;
+    font-size: 0.8125rem;
   }
 }
