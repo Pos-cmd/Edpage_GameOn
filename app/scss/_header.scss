@@ -38,6 +38,7 @@
       darken($rouge-principale, 25),
       transparent
     );
+    z-index: 1;
     transition: all 300ms ease-in;
   }
 
@@ -63,7 +64,7 @@
     height: 4rem;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
     background: #fff;
   }
 

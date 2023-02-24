@@ -98,6 +98,7 @@ menu.addEventListener("click", function () {
   } else {
     menu__togle.style.transform = "translateY(-200%)";
     overlay.style.opacity = 0;
+    overlay.style.display = "none";
   }
 });
 
@@ -181,7 +182,7 @@ form.addEventListener("submit", function (e) {
     hasError.validCheckbox = false;
   }
 
-  if (!Object.entries(hasError).some(error => error[1])) {
+  if (!Object.entries(hasError).some((error) => error[1])) {
     form_input.style.display = "none";
     form_success.style.display = "flex";
     [...smallList].forEach((small) => (small.innerText = ""));
