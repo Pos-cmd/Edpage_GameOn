@@ -21,3 +21,19 @@ $breakpoint-down: (
     @content;
   }
 }
+
+@mixin successInput(){
+  &.success {
+    small {
+      color: #2ecc71;
+    }
+  }
+}
+
+@mixin errorInput(){
+  &.error {
+    small {
+      color: #e74c3c;
+    }
+  }
+}

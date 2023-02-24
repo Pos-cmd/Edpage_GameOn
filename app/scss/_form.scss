@@ -3,13 +3,15 @@
   background-color: #1b1b1b;
   max-width: 34.5864rem;
   width: 100%;
-  height: 46.25rem;
+  height: 925px;
   margin-inline: auto;
   border-radius: 5px;
 
   &__items {
     // display: none;
     padding: 0 2rem;
+    height: 90%;
+    grid-template-rows: repeat(8, 1fr);
 
     &.btn {
       margin-top: 4rem;
@@ -33,26 +35,42 @@
     flex-direction: column;
     padding-bottom: 0.8125rem;
     color: #fff;
-    font-size: .9375rem;
+    font-size: 0.9375rem;
 
     &--no {
-      font-size: .875rem;
+      font-size: 0.875rem;
       color: #fff;
       margin-bottom: 1rem;
       line-height: 1.4;
+
+    @include errorInput;
+
+    @include successInput;
     }
 
-    // input {
-    //   accent-color: #06e0a9;
-    // }
+    @include errorInput;
 
-    input[type="text"] {
+    @include successInput;
+
+    small {
+      padding-top: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
       height: 2.5rem;
       border-radius: 0.3125rem;
+      border-color: #adadad;
       border: none;
       padding-inline: 1rem;
       margin-block-start: 0.625rem;
     }
+  }
+
+  .check{
+    @include errorInput;
+    @include successInput;
   }
 
   &__success {

@@ -140,7 +140,7 @@ p {
   height: 4rem;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   background: #fff;
 }
 .header__menu {
@@ -166,6 +166,7 @@ p {
   justify-content: space-evenly;
   border-radius: 20px;
   transition: transform 300ms ease-in-out;
+  z-index: 1;
 }
 .header__menu--toggle a {
   padding: 0.625rem;
@@ -283,6 +284,7 @@ p {
 }
 .footer span {
   color: #ff0000;
+  font-size: 0.8125rem;
 }
 
 .form {
@@ -290,12 +292,14 @@ p {
   background-color: #1b1b1b;
   max-width: 34.5864rem;
   width: 100%;
-  height: 46.25rem;
+  height: 925px;
   margin-inline: auto;
   border-radius: 5px;
 }
 .form__items {
   padding: 0 2rem;
+  height: 90%;
+  grid-template-rows: repeat(8, 1fr);
 }
 .form__items.btn {
   margin-top: 4rem;
@@ -323,13 +327,37 @@ p {
   margin-bottom: 1rem;
   line-height: 1.4;
 }
-.form__item input[type=text] {
+.form__item--no.error small {
+  color: #e74c3c;
+}
+.form__item--no.success small {
+  color: #2ecc71;
+}
+.form__item.error small {
+  color: #e74c3c;
+}
+.form__item.success small {
+  color: #2ecc71;
+}
+.form__item small {
+  padding-top: 0.3rem;
+}
+.form__item input[type=text],
+.form__item input[type=date],
+.form__item input[type=number] {
   height: 2.5rem;
   border-radius: 0.3125rem;
+  border-color: #adadad;
   border: none;
   padding-inline: 1rem;
   -webkit-margin-before: 0.625rem;
           margin-block-start: 0.625rem;
+}
+.form .check.error small {
+  color: #e74c3c;
+}
+.form .check.success small {
+  color: #2ecc71;
 }
 .form__success {
   display: none;

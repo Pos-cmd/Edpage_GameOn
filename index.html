@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name=description content="Site vitrine pour l'évènement GameOn"/>
+    <meta name="description" content="Site vitrine pour l'évènement GameOn" />
     <title>Game On</title>
     <link
       rel="stylesheet"
@@ -128,8 +128,9 @@
         </div>
       </div>
       <form
-        action=""
+        action="/"
         class="main__form form"
+        id="form"
         itemscope
         itemtype="https://schema.org/Person"
       >
@@ -143,149 +144,185 @@
               type="text"
               name="firstname"
               placeholder="Votre prénom..."
+              id="firstname"
               itemprop="givenName"
             />
+            <small></small>
           </li>
           <li class="form__item">
             <label for="lastname">Nom</label>
             <input
               type="text"
               name="lastname"
+              id="name"
               placeholder="Votre nom..."
               itemprop="familyName"
             />
+            <small></small>
           </li>
           <li class="form__item">
             <label for="email">E-mail</label>
             <input
               type="text"
               name="email"
+              id="email"
               placeholder="E-mail..."
               id=""
               itemprop="email"
             />
+            <small></small>
           </li>
           <li class="form__item">
             <label for="birthday">Date de naissance</label>
             <input
-              type="text"
+              type="date"
               name="birthday"
-              placeholder="Date de naissance.."
+              id="birthday"
               itemprop="birthDate"
             />
+            <small></small>
           </li>
           <li class="form__item">
             <label for="nb-participation"
               >À combien de tournois GameOn avez-vous déja participé ?</label
             >
             <input
-              type="text"
+              type="number"
               name="nb-participation"
+              id="nb-participation"
               placeholder="Nombre de participation..."
             />
+            <small></small>
           </li>
           <li class="form__item--no">
-            <label for="location"
-              >À quel tournois souhaitez-vous participer cette année ?</label
-            ><br />
-            <label for="new-york">New-York</label>
-            <input
-              type="radio"
-              name="location"
-              value="new-york"
-              placeholder="New York"
-              itemprop="memberOf"
-            />
-            <label for="sans-francisco">Sans-Francisco</label>
-            <input
-              type="radio"
-              name="location"
-              value="sans-francisco"
-              placeholder="sans-francisco"
-              itemprop="memberOf"
-            />
-            <label for="seatle">Seatle</label>
-            <input
-              type="radio"
-              name="location"
-              value="seatle"
-              placeholder="seatle"
-              itemprop="memberOf"
-            />
-            <label for="chicago">Chicago</label>
-            <input
-              type="radio"
-              name="location"
-              value="chicago"
-              placeholder="chicago"
-              itemprop="memberOf"
-            />
-            <label for="boston">Boston</label>
-            <input
-              type="radio"
-              name="location"
-              value="boston"
-              placeholder="boston"
-              itemprop="memberOf"
-            />
-            <label for="portland">Portland</label>
-            <input
-              type="radio"
-              name="location"
-              value="portland"
-              placeholder="portland"
-              itemprop="memberOf"
-            />
+            <div class="radio">
+              <label for="town"
+                >À quel tournois souhaitez-vous participer cette année ?</label
+              ><br />
+              <label for="new-york">New-York</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="new-york"
+                placeholder="New York"
+                itemprop="memberOf"
+              />
+              <label for="sans-francisco">Sans-Francisco</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="sans-francisco"
+                placeholder="sans-francisco"
+                itemprop="memberOf"
+              />
+              <label for="seatle">Seatle</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="seatle"
+                placeholder="seatle"
+                itemprop="memberOf"
+              />
+              <label for="chicago">Chicago</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="chicago"
+                placeholder="chicago"
+                itemprop="memberOf"
+              />
+              <label for="boston">Boston</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="boston"
+                placeholder="boston"
+                itemprop="memberOf"
+              />
+              <label for="portland">Portland</label>
+              <input
+                type="radio"
+                name="town"
+                class="town"
+                value="portland"
+                placeholder="portland"
+                itemprop="memberOf"
+              />
+            </div>
+            <small></small>
           </li>
           <li
             class="form__item--no"
             itemscope
             itemtype="https://schema.org/CheckAction"
           >
-            <input
-              type="checkbox"
-              name="valid"
-              placeholder="valid"
-              itemprop="potentialAction"
-            />
-            <label for="valid" itemprop="name"
-              >J'ai lue et accepté les conditions d'utilisation</label
-            ><br />
-            <input
-              type="checkbox"
-              name="notification"
-              placeholder="notification"
-              itemprop="potentialAction"
-            />
-            <label for="notification" itemprop="name"
-              >Je souhaite être prévenu des prochains évènement</label
-            >
+            <div class="check">
+              <input
+                type="checkbox"
+                name="valid"
+                id="validCheckbox"
+                placeholder="valid"
+                value="readCondition"
+                itemprop="potentialAction"
+              />
+              <label for="valid" itemprop="name"
+                >J'ai lue et accepté les conditions d'utilisation</label
+              ><br />
+              <small></small>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="notification"
+                placeholder="notification"
+                value="acceptNotification"
+                itemprop="potentialAction"
+              />
+              <label for="notification" itemprop="name"
+                >Je souhaite être prévenu des prochains évènement</label
+              >
+            </div>
           </li>
           <li
             class="form__item"
             itemscope
             itemtype="https://schema.org/CommunicateAction"
           >
-            <input
+            <button
               type="submit"
-              value="Je M'inscris"
               class="form__sub-btn btn valid_form"
               itemprop="potentialAction"
-            />
+            >Je M'inscris</button>
           </li>
         </ul>
-
-        <div class="form__success"  itemscope itemtype="https://schema.org/EventReservation">
+        <div
+          class="form__success"
+          itemscope
+          itemtype="https://schema.org/EventReservation"
+        >
           <div class="form__success-container">
             <h2 class="form__success-msg">Merci pour votre inscription</h2>
             <button class="form__sub-btn btn quit_form">Fermer</button>
-            <meta itemprop="reservationStatus" content="http://schema.org/Confirmed">
+            <meta
+              itemprop="reservationStatus"
+              content="http://schema.org/Confirmed"
+            />
           </div>
         </div>
       </form>
     </main>
     <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
-      <div class="footer__container" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <div
+        class="footer__container"
+        itemprop="publisher"
+        itemscope
+        itemtype="http://schema.org/Organization"
+      >
         <span itemprop="name">GameOne Inc.</span>
         <span>&nbsp;&copy; 2014 - 2022, All Rights Reserved.</span>
       </div>
