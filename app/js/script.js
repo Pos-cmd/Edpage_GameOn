@@ -178,7 +178,6 @@ form.addEventListener("submit", function (e) {
   }
 
   if (!Object.entries(hasError).some((error) => error[1])) {
-    form_input.style.display = "none";
     changeDisplay(form_input, "none");
     changeDisplay(form_success, "flex");
     [...smallList].forEach((small) => (small.innerText = ""));
